@@ -37,40 +37,40 @@ const Employee6 = new companyEmployee(1005 , "Rana Saleh" , "Development" , "Jun
 const Employee7 = new companyEmployee(1006 , "Hadi Ahmad" , "Finance" , "Mid-Senior" )
 
 console.log(Employee1)
-console.log(Employee1.FullName, Employee1.Salary())
+console.log("Name :" + Employee1.FullName, "  Salary :"+ Employee1.Salary())
 
 
 
 console.log(Employee2)
-console.log(Employee2.FullName ,Employee2.Salary())
+console.log("Name :" + Employee2.FullName  ,"  Salary :" + Employee2.Salary())
 
 
 
 
 console.log(Employee3)
-console.log(Employee3.FullName ,Employee3.Salary())
+console.log("Name :" + Employee3.FullName ,"  Salary :" + Employee3.Salary())
 
 
 
 
 console.log(Employee4)
-console.log(Employee4.FullName ,Employee4.Salary())
+console.log("Name :" + Employee4.FullName ,"  Salary :" + Employee4.Salary())
 
 
 
 
 console.log(Employee5)
-console.log(Employee5.FullName ,Employee5.Salary())
+console.log("Name :" + Employee5.FullName ,"  Salary :" + Employee5.Salary())
 
 
 
 
 console.log(Employee6)
-console.log(Employee6.FullName ,Employee6.Salary())
+console.log("Name :" + Employee6.FullName ,"  Salary :" + Employee6.Salary())
 
 
 
 
 console.log(Employee7)
-console.log(Employee7.FullName ,Employee7.Salary())
+console.log("Name :" + Employee7.FullName ,"  Salary :" + Employee7.Salary())
 
