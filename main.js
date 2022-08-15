@@ -4,29 +4,64 @@ function companyEmployee(EmployeeID , FullName , Department , Level , ImageURL )
     this.Department = Department;
     this.Level = Level;
     this.ImageURL = ImageURL;
-    this.Salary= Salary=function EmployeeSalary(){
-    if (this.Level ==="Junior"){
-        return(  Math.floor(Math.random() * (1000 - 500) ) + 500
-     )
-    };
 
-    if (this.Level ==="Mid-Senior"){
-        return(  Math.floor(Math.random() * (1500 - 1000) ) + 1000
-        )
-       }
-
+        if (this.Level ==="Junior"){
+            this.Salary=  Math.floor(Math.random() * (1000 - 500) ) + 500
+         
+        };
+    
+        if (this.Level ==="Mid-Senior"){
+            this.Salary= Math.floor(Math.random() * (1500 - 1000) ) + 1000
+            
+           };
+    
+    
+    
+    
+        if (this.Level ==="Senior"){
+            this.Salary=  this.Salary=  Math.floor(Math.random() * (2000 - 1500) ) + 1500
+              
+            
+           };
 
     
-
-
-    if (this.Level ==="Senior"){
-       return( this.Salary=  Math.floor(Math.random() * (2000 - 1500) ) + 1500)
-          
         
-       };
-
-    };
+    
+    
 }
+
+
+
+
+
+
+//------------------------- Another Example using Factory Function
+
+
+
+// function companyEmployee(EmployeeID, FullName, Department, Level) {
+// 	let Salary =
+// 		Level === 'Mid-Senior'
+// 			? Math.floor(Math.random() * (1500 - 1000)) + 1000
+// 			: Level === 'Senior'
+// 			? Math.floor(Math.random() * (2000 - 1500)) + 1500
+// 			: Math.floor(Math.random() * (1000 - 500)) + 500
+
+// 	return {
+// 		EmployeeID,
+// 		FullName,
+// 		Department,
+// 		Level,
+// 		Salary,
+// 	}
+// }
+
+
+
+
+
+
+
 
 
 const Employee1 = new companyEmployee(1000 , "Ghazi Samer" , "Administration" , "Senior" )
@@ -75,7 +110,7 @@ function myTable(Employee){
   for (let KEYS in Employee){
 
     if (KEYS ==="ImageURL"){
-        break;
+        continue;
     }
     let bodyCell = document.createElement("td");
     bodyRow.appendChild(bodyCell);
@@ -103,48 +138,54 @@ function fillTable(){
 function render(){
 
 
-    CreateTable()
+ CreateTable()
 
+
+    
+for(i=0;i<=EmployeesArray.length;i++){
+
+    console.log(EmployeesArray[i])
+}
 
 // console.log(Employee1)
-console.log("Name :" + Employee1.FullName, "  Salary :"+ Employee1.Salary())
+// console.log("Name :" + Employee1.FullName, "  Salary :"+ Employee1.Salary)
 
 
 
 // console.log(Employee2)
-console.log("Name :" + Employee2.FullName  ,"  Salary :" + Employee2.Salary())
+// console.log("Name :" + Employee2.FullName  ,"  Salary :" + Employee2.Salary)
 
 
 
 
-// console.log(Employee3)
-console.log("Name :" + Employee3.FullName ,"  Salary :" + Employee3.Salary())
+// // console.log(Employee3)
+// console.log("Name :" + Employee3.FullName ,"  Salary :" + Employee3.Salary)
 
 
 
 
-// console.log(Employee4)
-console.log("Name :" + Employee4.FullName ,"  Salary :" + Employee4.Salary())
+// // console.log(Employee4)
+// console.log("Name :" + Employee4.FullName ,"  Salary :" + Employee4.Salary)
 
 
 
 
-// console.log(Employee5)
-console.log("Name :" + Employee5.FullName ,"  Salary :" + Employee5.Salary())
+// // console.log(Employee5)
+// console.log("Name :" + Employee5.FullName ,"  Salary :" + Employee5.Salary)
 
 
 
 
-// console.log(Employee6)
-console.log("Name :" + Employee6.FullName ,"  Salary :" + Employee6.Salary())
+// // console.log(Employee6)
+// console.log("Name :" + Employee6.FullName ,"  Salary :" + Employee6.Salary)
 
 
 
 
-// console.log(Employee7)
-console.log("Name :" + Employee7.FullName ,"  Salary :" + Employee7.Salary())
+// // console.log(Employee7)
+// console.log("Name :" + Employee7.FullName ,"  Salary :" + Employee7.Salary)
 }
-
 render();
+
 
 
