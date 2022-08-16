@@ -39,7 +39,7 @@ function companyEmployee(EmployeeID , FullName , Department , Level , ImageURL )
 
 
 
-// function companyEmployee(EmployeeID, FullName, Department, Level) {
+// function companyEmployee2(EmployeeID, FullName, Department, Level) {
 // 	let Salary =
 // 		Level === 'Mid-Senior'
 // 			? Math.floor(Math.random() * (1500 - 1000)) + 1000
@@ -64,19 +64,19 @@ function companyEmployee(EmployeeID , FullName , Department , Level , ImageURL )
 
 
 
-const Employee1 = new companyEmployee(1000 , "Ghazi Samer" , "Administration" , "Senior" )
-const Employee2 = new companyEmployee(1001 , "Lana Ali" , "Finance" , "Senior" )
-const Employee3 = new companyEmployee(1002 , "Tamara Ayoub" , "Marketing" , "Senior" )
-const Employee4 = new companyEmployee(1003 , "Safi Walid" , "Administration" , "Mid-Senior" )
-const Employee5 = new companyEmployee(1004 , "Omar Zaid" , "Development" , "Senior" )
-const Employee6 = new companyEmployee(1005 , "Rana Saleh" , "Development" , "Junior" )
-const Employee7 = new companyEmployee(1006 , "Hadi Ahmad" , "Finance" , "Mid-Senior" )
+// const Employee1 = new companyEmployee(1000 , "Ghazi Samer" , "Administration" , "Senior" )
+// const Employee2 = new companyEmployee(1001 , "Lana Ali" , "Finance" , "Senior" )
+// const Employee3 = new companyEmployee(1002 , "Tamara Ayoub" , "Marketing" , "Senior" )
+// const Employee4 = new companyEmployee(1003 , "Safi Walid" , "Administration" , "Mid-Senior" )
+// const Employee5 = new companyEmployee(1004 , "Omar Zaid" , "Development" , "Senior" )
+// const Employee6 = new companyEmployee(1005 , "Rana Saleh" , "Development" , "Junior" )
+// const Employee7 = new companyEmployee(1006 , "Hadi Ahmad" , "Finance" , "Mid-Senior" )
 
 // let dada = Object.values(Employee1)
 // const newArray=Object.keys(Employee1)
 
 
-const EmployeesArray= [Employee1 , Employee2 , Employee3 , Employee4 , Employee5 , Employee6 , Employee7]
+// const EmployeesArray= [Employee1 , Employee2 , Employee3 , Employee4 , Employee5 , Employee6 , Employee7]
 
 
 
@@ -138,7 +138,7 @@ function fillTable(){
 function render(){
 
 
- CreateTable()
+//  CreateTable()
 
 
     
@@ -185,7 +185,60 @@ for(i=0;i<=EmployeesArray.length;i++){
 // // console.log(Employee7)
 // console.log("Name :" + Employee7.FullName ,"  Salary :" + Employee7.Salary)
 }
-render();
+// render();
+
+// let formElement = document.getElementById("Form1");
+
+const EmployeesArray= [];
 
 
+
+function formData(event){
+    event.preventDefault();
+
+let EmployeeID = document.getElementById('EmployeeID').value;
+let FullName = document.getElementById('fullName').value;
+let Department = document.getElementById('Department').value;
+let Level = document.getElementById('Level').value;
+let ImageURL = document.getElementById('ImageURL').value;
+
+
+   let employeee = new companyEmployee(EmployeeID , FullName , Department , Level , ImageURL) ;
+
+   let Card=document.createElement("div");
+    document.getElementById("CardsContainer").appendChild(Card);
+    let Img = document.createElement("img");
+    Img.src=(employeee.ImageURL);
+    Card.appendChild(Img);
+    let cardName = document.createElement("h4");
+    cardName.textContent=("Name:" + employeee.FullName + "-ID: " +employeee.EmployeeID );
+    Card.appendChild(cardName);
+    let Department1 = document.createElement("h5");
+    Department1.textContent=("Department :" + employeee.Department + "-Level:" +employeee.Level );
+    Card.appendChild(Department1);
+    let empSalary = document.createElement("p");
+    empSalary.textContent=(employeee.Salary);
+    Card.appendChild(empSalary);
+
+    EmployeesArray.push(employeee);
+    localStorage.setItem("Employees",JSON.stringify(EmployeesArray));
+
+    Card.style.display = 'inline-block';
+    Card.style.background = '#54BAB9';
+    Card.style.borderRadius='20px';
+    Card.style.textAlign='center';
+    empSalary.style.fontSize='2rem';
+    Img.style.borderRadius='50%';
+    Img.style.margin='1rem';
+    Card.style.margin='1rem';
+    Card.style.padding='1.5rem';
+    cardName.style.fontStyle='italic';
+
+}
+
+console.log(EmployeesArray)
+
+
+let btn = document.getElementById('submit-btn');
+btn.addEventListener('click' ,formData)
 

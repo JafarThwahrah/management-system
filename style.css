@@ -5,8 +5,9 @@
 }
 
 main {
-    height:100vh;
+    /* height:100vh; */
     background-color: antiquewhite;
+    /* display: flex; */
 }
 
 footer{
@@ -18,3 +19,19 @@ p{
     margin: 0;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: fit-content;
+    background-color: blueviolet;
+    padding: 2em;
+    border-radius: 15px;
+/* position: absolute; */
+}
+
+.cardscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
