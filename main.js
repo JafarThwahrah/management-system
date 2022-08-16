@@ -203,6 +203,7 @@ let Level = document.getElementById('Level').value;
 let ImageURL = document.getElementById('ImageURL').value;
 
 
+
    let employeee = new companyEmployee(EmployeeID , FullName , Department , Level , ImageURL) ;
 
    let Card=document.createElement("div");
@@ -220,8 +221,16 @@ let ImageURL = document.getElementById('ImageURL').value;
     empSalary.textContent=(employeee.Salary);
     Card.appendChild(empSalary);
 
+
+
+
     EmployeesArray.push(employeee);
     localStorage.setItem("Employees",JSON.stringify(EmployeesArray));
+
+
+
+
+
 
     Card.style.display = 'inline-block';
     Card.style.background = '#54BAB9';
