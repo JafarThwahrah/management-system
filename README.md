@@ -7,7 +7,6 @@ This Task contains an object constructor which creates Object for each employee,
 Create table and fill it using Javascript.
 
 
-
 # Events Task
 - Create card for each employee once event happened and render it to html page.
 - Add Some Style for your employee cards.
