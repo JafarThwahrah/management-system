@@ -211,12 +211,24 @@ let ImageURL = document.getElementById('ImageURL').value;
     let Img = document.createElement("img");
     Img.src=(employeee.ImageURL);
     Card.appendChild(Img);
+
+    let EmpID = document.createElement("h4");
+    EmpID.textContent=("ID: " +employeee.EmployeeID );
+    Card.appendChild(EmpID);
+
+
     let cardName = document.createElement("h4");
-    cardName.textContent=("Name:" + employeee.FullName + "-ID: " +employeee.EmployeeID );
+    cardName.textContent=("Name:" + employeee.FullName);
     Card.appendChild(cardName);
     let Department1 = document.createElement("h5");
-    Department1.textContent=("Department :" + employeee.Department + "-Level:" +employeee.Level );
+    Department1.textContent=("Department :" + employeee.Department);
     Card.appendChild(Department1);
+
+    let Lev = document.createElement("h5");
+    Lev.textContent=("Level:" + employeee.Level);
+    Card.appendChild(Lev);
+
+
     let empSalary = document.createElement("p");
     empSalary.textContent=(employeee.Salary);
     Card.appendChild(empSalary);
@@ -233,7 +245,7 @@ let ImageURL = document.getElementById('ImageURL').value;
 
 
     Card.style.display = 'inline-block';
-    Card.style.background = '#54BAB9';
+    Card.style.background = '#5C5EBA';
     Card.style.borderRadius='20px';
     Card.style.textAlign='center';
     empSalary.style.fontSize='2rem';
@@ -242,6 +254,23 @@ let ImageURL = document.getElementById('ImageURL').value;
     Card.style.margin='1rem';
     Card.style.padding='1.5rem';
     cardName.style.fontStyle='italic';
+    Card.style.boxShadow = '3px 5px #888888';
+    Card.style.opacity = '90%';
+
+
+
+
+    Card.addEventListener('mouseenter',()=>{
+        Card.style.opacity = '100%';
+        Card.style.boxShadow = '5px 8px #888888';
+
+
+    })
+    Card.addEventListener('mouseleave',()=>{
+        Card.style.opacity = '90%';
+        Card.style.boxShadow = '3px 5px #888888';
+
+    })
 
 }
 
