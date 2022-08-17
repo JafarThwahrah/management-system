@@ -1,21 +1,23 @@
-function companyEmployee(EmployeeID, FullName, Department, Level, ImageURL) {
-  this.EmployeeID = EmployeeID;
-  this.FullName = FullName;
-  this.Department = Department;
-  this.Level = Level;
-  this.ImageURL = ImageURL;
+class companyEmployee {
+  constructor(EmployeeID, FullName, Department, Level, ImageURL) {
+    this.EmployeeID = EmployeeID;
+    this.FullName = FullName;
+    this.Department = Department;
+    this.Level = Level;
+    this.ImageURL = ImageURL;
 
-  if (this.Level === "Junior") {
-    this.Salary = Math.floor(Math.random() * (1000 - 500)) + 500;
-  }
+    if (this.Level === "Junior") {
+      this.Salary = Math.floor(Math.random() * (1000 - 500)) + 500;
+    }
 
-  if (this.Level === "Mid-Senior") {
-    this.Salary = Math.floor(Math.random() * (1500 - 1000)) + 1000;
-  }
+    if (this.Level === "Mid-Senior") {
+      this.Salary = Math.floor(Math.random() * (1500 - 1000)) + 1000;
+    }
 
-  if (this.Level === "Senior") {
-    this.Salary = this.Salary =
-      Math.floor(Math.random() * (2000 - 1500)) + 1500;
+    if (this.Level === "Senior") {
+      this.Salary = this.Salary =
+        Math.floor(Math.random() * (2000 - 1500)) + 1500;
+    }
   }
 }
 
