@@ -64,7 +64,6 @@ console.log("Name :" + Employee5.FullName ,"  Salary :" + Employee5.Salary())
 
 
 
-
 console.log(Employee6)
 console.log("Name :" + Employee6.FullName ,"  Salary :" + Employee6.Salary())
 
