@@ -232,6 +232,8 @@ function saveToLocal(){
     // console.log(arr);
  }
 
+console.log(Employee7)
+console.log("Name :" + Employee7.FullName ,"  Salary :" + Employee7.Salary())
 
 
  let btn = document.getElementById("submit-btn");
